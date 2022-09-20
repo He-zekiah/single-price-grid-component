@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
@@ -15,18 +16,17 @@
 }
 
 .content {
-    height: 300px;
-    width: 420px;
-    /* display: flex; */
-    justify-content: center; 
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
 .con1 {
-    width: 420px;
-    height: 110px;
+    width: 100%;
     background-color: #fff;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -54,17 +54,13 @@
 }
 
 .con2 {
-    width: 480px;
-    height: 180px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
 }
 
 .con3 {
-    width: 420px;
-    height: 150px;
+    width: 50%;
     padding: 20px;
     border-bottom-left-radius: 8px;
     background-color: hsl(179, 62%, 40%)
@@ -103,9 +99,9 @@
 }
 
 .click {
-    width: 200px;
+    width: 100%;
     height: 35px;
-    background-color:  hsl(71, 73%, 54%);
+    background-color: hsl(71, 73%, 54%);
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -113,8 +109,7 @@
 }
 
 .con4 {
-    width: 420px;
-    height: 150px;
+    width: 50%;
     padding: 20px;
     background-color: hsl(179, 62%, 43%);
     border-bottom-right-radius: 6px;
@@ -131,50 +126,43 @@
     color: hsla(0, 100%, 100%, 0.5);
 }
 
-@media screen and (max-width: 768px) {  
-    .container {
-        flex-direction: column;
-        height: 1200px;
-    }
-    .content {
-        display: block;
-        width: 200px;
-        height: 300px; 
-    }
+@media screen and (max-width: 768px) {
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
 
-    .con1 {
-        width: 200px;
-        height: 220px;
-        padding: 20px;
-    }
+.content {
+        width: 300px;
+        margin-left: 20px;
+        margin-right: 20px;
+}
 
-    .text1 {
-        font-size: 11.2px;
-    }
+.text1 {
+    font-size: 11.2px;
+}
 
-    .mess {
-        font-size: 12px;
-    }
+.mess {
+    font-size: 12px;
+}
 
-    .intro {
-        font-size: 16px;
-    }
+.intro {
+    font-size: 16px;
+}
 
-    .con2 {
-        flex-direction: column;
-        width: 200px;
-        height: 200px;
-        padding: 20px;
-    }
+.con2 {
+    flex-direction: column;
+    width: 100%;
+}
 
-    .con3 {
-        width: 200px;
-        height: 200px;
-        border-bottom-left-radius: 0;
-    }
+.con3 {
+    width: 100%;
+    border-bottom-left-radius: 0;
+}
 
-    .con4 {
-        width: 200px;
-        border-bottom-left-radius: 8px;
-    }
+.con4 {
+    width: 100%;
+    border-bottom-left-radius: 8px;
+}
 }
